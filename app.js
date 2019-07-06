@@ -17,7 +17,7 @@ var commentRoutes       = require("./routes/comments"),
 
 //mongoose.connect("mongodb://localhost:27017/yelp_camp_v12",  { useNewUrlParser: true });
 //mongodb+srv://dbHenry:starbucksHhffheefee426*@cluster0-ovtx4.mongodb.net/test?retryWrites=true&w=majority
-mongoose.connect("mongodb+srv://dbHenry:starbucksHhffheefee426*@cluster0-ovtx4.mongodb.net/test?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://dbHenry:starbucksHhffheefee426*@cluster0-ovtx4.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true });
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname+"/public"));
