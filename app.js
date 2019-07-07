@@ -15,9 +15,11 @@ var commentRoutes       = require("./routes/comments"),
     campgroundRoutes    = require("./routes/campgrounds"),
     indexRoutes          = require("./routes/index");
 
+var port = process.env.PORT || 8080;
+
 //mongoose.connect("mongodb://localhost:27017/yelp_camp_v12",  { useNewUrlParser: true });
-//mongodb+srv://dbHenry:starbucksHhffheefee426*@cluster0-ovtx4.mongodb.net/test?retryWrites=true&w=majority
-mongoose.connect("mongodb+srv://dbHenry:starbucksHhffheefee426%2A@cluster0-ovtx4.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true });
+//mongodb+srv://dbHenry:starbucksHhffheefee426%2A@cluster0-ovtx4.mongodb.net/test?retryWrites=true&w=majority
+mongoose.connect("mongodb+srv://newuser2:starbuckshhffheefee@cluster0-ovtx4.mongodb.net/test?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname+"/public"));
@@ -56,6 +58,6 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 
-app.listen(5000,function(){
-    console.log("serving app on port 5000");
-});
+app.listen(port,function(){
+    console.log("our app is listening on " +port);
+ });
