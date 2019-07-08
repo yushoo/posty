@@ -61,6 +61,6 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 
-app.listen(5000,function(){
+app.listen(port,function(){
     console.log("our app is listening on ");
  });
