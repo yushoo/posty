@@ -17,9 +17,10 @@ var commentRoutes       = require("./routes/comments"),
 
 var port = process.env.PORT || 8080;
 
-mongoose.connect(process.env.DATABASEURL,  { useNewUrlParser: true });
+//mongoose.connect(process.env.DATABASEURL,  { useNewUrlParser: true });
 //mongodb+srv://dbHenry:starbucksHhffheefee426%2A@cluster0-ovtx4.mongodb.net/test?retryWrites=true&w=majority
 //mongoose.connect("mongodb+srv://newuser2:starbuckshhffheefee@cluster0-ovtx4.mongodb.net/test?retryWrites=true&w=majority");
+mongoose.connect(process.env.DATABASEURL);
 //use process.env.databaseURL in real projects
 
 app.use(bodyParser.urlencoded({extended: true}));
