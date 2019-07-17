@@ -1,5 +1,5 @@
 # posty
-CRUD application with dynamic backend.
+dynamic CRUD application.
 NEMO stack
 
 Current Application
